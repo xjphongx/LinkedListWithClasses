@@ -104,7 +104,7 @@ using namespace std;
         current = head;
         
         for (int a = 1; a < p; a ++)
-        {
+        { 
             prev = current;
             current = current->getNext();
         }
@@ -112,5 +112,31 @@ using namespace std;
         prev->setNext(temp);
 
     }
-    int  sum();   // returns the sum of the nodes in the list
-    int  sum(IntListNode* node);   // recursive function, used by above function
+    int IntegerList::sum()// returns the sum of the nodes in the list
+    {
+        //traverse the list
+        IntListNode* cursor;
+        cursor = head;
+        int sumList = 0;
+        if(head == nullptr)
+        {
+            cout <<"Theres nothing in the list"<<endl;
+            return sumList;
+        }
+        sumList =sum(head);
+        return sumList;
+
+    }   
+    int IntegerList::sum(IntListNode* node)// this a function called by sum to compute sum recursively
+    {
+        int sumList;
+        
+        if(node!=nullptr)
+        {
+            return(node->getElement()+sum(node->getNext()));
+        }
+        else{
+            return 0;
+        }
+
+    }   // recursive function, used by above function
