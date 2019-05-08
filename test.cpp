@@ -34,6 +34,13 @@ int main() {
 	list.removeFront();
 	list.print();
 
+	cout << "inserting 2 at position 2" <<endl;
+	list.AddAtPosition(2, 2);
+	list.print();
+
+
+
+
 	//list.~IntegerList();
 	cout<< "\nprogram complete..."<<endl;
 	return 0;
