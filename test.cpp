@@ -44,7 +44,7 @@ int main() {
 
 
 
-	//list.~IntegerList();
+	list.~IntegerList();
 	cout<< "\nprogram complete..."<<endl;
 	return 0;
 }

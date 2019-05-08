@@ -129,7 +129,6 @@ using namespace std;
     }   
     int IntegerList::sum(IntListNode* node)// this a function called by sum to compute sum recursively
     {
-        int sumList;
         
         if(node!=nullptr)
         {
