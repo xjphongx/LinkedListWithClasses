@@ -38,6 +38,9 @@ int main() {
 	list.AddAtPosition(2, 2);
 	list.print();
 
+	cout << "finding the sum" <<endl;
+	int sum = list.sum();
+	cout << "final sum: "<<sum <<endl;
 
 
 
