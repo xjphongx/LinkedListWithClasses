@@ -91,11 +91,25 @@ using namespace std;
         }
         return listSize;
     }
-    void AddAtPosition(int e, int p)
+    void IntegerList::AddAtPosition(int e, int p)
     {//adding e at position p
         
+        IntListNode* temp;
+        temp = new IntListNode(e, temp->getNext());
 
+        //make current and prev pointers
+        IntListNode* current;
+        IntListNode* prev;
 
+        current = head;
+        
+        for (int a = 1; a < p; a ++)
+        {
+            prev = current;
+            current = current->getNext();
+        }
+        temp->setNext(current);
+        prev->setNext(temp);
 
     }
     int  sum();   // returns the sum of the nodes in the list
